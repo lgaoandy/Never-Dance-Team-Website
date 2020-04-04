@@ -1,0 +1,59 @@
+/* For Index Page*/
+body {
+    font-family: 'Squada One', cursive;
+    font-size: 16px;
+    margin:0;
+    text-align: center;
+}
+h1 {
+    font-family: 'Oswald', cursive;
+    text-transform: uppercase;
+    color: dimgrey;
+}
+nav {
+    background: dimgrey;
+    padding:5px;
+    width: 100%;
+    font-weight: 550;
+    text-transform: uppercase;
+    border-top: 3px lightgrey solid;
+    border-bottom: 3px lightgrey solid;
+}
+nav a {
+    padding:0px 10px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    transition: 0.5s;
+    background: #0d0d0d;
+    border-radius: 5px;
+    color: lightblue;
+}
+main {
+    margin-top: 35px;
+}
+em {
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: grey;
+}
+
+
+/* Specific classes */
+.lastest-cover {
+    border: 10px solid lightgrey;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+}
+.lastest-cover iframe {
+    border: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
