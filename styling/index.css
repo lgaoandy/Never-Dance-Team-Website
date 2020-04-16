@@ -1,42 +1,46 @@
 @font-face {
     src: url(../fonts/Lovelo-LineBold.ttf);
-    font-family: lovelo;
+    font-family: "Lovelo-bold";
 }
 
 /* For Index Page*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 body {
-    font-family: 'Squada One', cursive;
-    font-size: 20px;
-    margin:0;
+    font-family: "Lato",sans-serif;
     text-align: center;
-    cursor: default;
-}
-h1 {
-    font-family: lovelo;
-    font-size: 60px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: dimgrey;
-}
-nav {
-    font-size: 24px;
-    background: dimgrey;
-    padding:5px;
-    width: 100%;
-    font-weight: 550;
-    text-transform: uppercase;
-    border-top: 3px lightgrey solid;
-    border-bottom: 3px lightgrey solid;
+    background: #F1F1F1;
 }
 a { 
     text-decoration: none; /* remove default link underline */
 }
+header {
+    font-family: 'Squada One', cursive;
+    width: 100%;
+    height: auto;
+}
 header a {
     color: white;
 }
+h1 { /* Hidden display for smaller viewports */
+    font-family: "Lovelo-bold";
+    font-size: 60px;
+    color: #1A1C23;
+    display: none;
+    padding: 15px 0;
+}
+nav {
+    background: #1A1C23;
+    padding:5px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
 nav a {
-    padding:0px 10px;
+    display: block;
+    padding: 5px 0;
 }
 nav a:hover {
     transition: 0.5s;
@@ -45,17 +49,20 @@ nav a:hover {
     color: lightblue;
 }
 main {
-    margin-top: 35px;
+    margin: 25px 40px;
 }
 em {
-    text-decoration: underline;
+    font-weight: 550;
     text-transform: uppercase;
     color: grey;
 }
 footer {
-    position: sticky;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: rgb(78, 78, 78, 0.7);
-    padding: 15px 0;
+    padding: 10px 0;
+    font-size: 24px;
 }
 footer a {
     color: white;
@@ -66,6 +73,9 @@ footer i {
 
 
 /* Specific classes */
+.header-logo {
+    max-width: 50%;
+}
 .lastest-cover {
     border: 10px solid lightgrey;
     overflow: hidden;
@@ -79,4 +89,36 @@ footer i {
     left: 0;
     top: 0;
     width: 100%;
+}
+
+@media only screen and (min-width: 520px){
+    h1 {
+        display: block;
+    }
+    .logo-container {
+        margin: 0 10vw;
+    }
+    .header-logo {
+        position: absolute;
+        left: 15vw;
+        top: 10px;
+        max-width: 80px;
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 840px){
+    header {
+        background-color: grey;
+    }
+    nav a {
+        display: inline;
+        margin: 20px 10px;
+    }
+    main {
+        max-width: 850px;
+        width: 60%;
+        margin: auto;
+        padding-top: 50px;
+    }
 }
