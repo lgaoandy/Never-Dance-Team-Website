@@ -1,73 +1,4 @@
-@font-face {
-    src: url(../fonts/Lovelo-LineBold.ttf);
-    font-family: lovelo;
-}
-
-/* For Index Page*/
-body {
-    font-family: 'Squada One', cursive;
-    font-size: 20px;
-    margin:0;
-    text-align: center;
-}
-h1 {
-    font-family: lovelo;
-    font-size: 60px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: dimgrey;
-}
-nav {
-    font-size: 24px;
-    background: dimgrey;
-    padding:5px;
-    width: 100%;
-    font-weight: 550;
-    text-transform: uppercase;
-    border-top: 3px lightgrey solid;
-    border-bottom: 3px lightgrey solid;
-}
-nav a {
-    padding:0px 10px;
-}
-a {
-    text-decoration: none;
-    color: white;
-}
-a:hover {
-    transition: 0.5s;
-    background: #0d0d0d;
-    border-radius: 5px;
-    color: lightblue;
-}
-main {
-    margin-top: 35px;
-}
-em {
-    text-decoration: underline;
-    text-transform: uppercase;
-    color: grey;
-}
-
-
 /* Specific classes */
-.lastest-cover {
-    border: 10px solid lightgrey;
-    overflow: hidden;
-    padding-top: 56.25%;
-    position: relative;
-}
-.lastest-cover iframe {
-    border: 0;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-
 .member-row {
     display: flex;
     flex-wrap: wrap;
@@ -82,9 +13,17 @@ em {
 }
 
 .member-column img {
+    cursor: pointer;
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+}
+
+.member-column img:hover {
+    opacity: 0.9;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -103,3 +42,65 @@ em {
     }
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    max-height: 50vh;
+}
+
+.modal-caption {
+    display: block;
+    padding-top: 10px;
+    color: white;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: #bbb;
+}
+
+/* Add Animation */
+.modal-image {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s; 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}

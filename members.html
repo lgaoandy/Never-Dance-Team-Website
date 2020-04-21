@@ -2,24 +2,34 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>:: Never Offical ::</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Members - Never Offical</title>
         <link rel="icon" href="../images/never.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
+        <link rel="stylesheet" href="../styling/index.css">
         <link rel="stylesheet" href="../styling/members.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+        <script type="text/javascript" src="../script/members.js" defer></script>
     </head>
     <body>
         <header>
-            <a href="index.html">
-                <h1>Never</h1>
-            </a>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../images/never.png" alt="Never" class="header-logo">
+                    <h1>Never</h1>
+                </a>
+            </div>
             <nav>
-                <a href="about.html">About Us</a>
+                <a href="#">Merch</a>
                 <a href="members.html">Members</a>
-                <a href="auditions.html">Auditions</a>
+                <a href="#auditions">Auditions</a>
             </nav>
         </header>
         <main>
+            <h2>Members</h2>
+            <p>Meet the Never family!</p>
             <div class="member-row">
                 <div class="member-column">
                     <img src="../images/members/AJ.jpg">
@@ -52,8 +62,25 @@
                 </div>
             </div>
         </main>
+
+        <div class="modal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-container">
+                <img class="modal-image">
+                <div class="modal-caption">
+            </div>
+        </div>
+        
         <footer>
-            <a href="https://www.instagram.com/neverofficialyyc/" target="_blank" class="sb no-border insta">Stray Kids Instagram</a>
+            <a href="https://www.instagram.com/neverofficialyyc/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/neverofficialyyc/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCN76HJCEOipjDLIB5bYMexw/" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
         </footer>
     </body>
 </html>

@@ -91,6 +91,7 @@ footer i {
     width: 100%;
 }
 
+/* Responsive Design - Width */
 @media only screen and (min-width: 520px){
     h1 {
         display: block;
@@ -107,6 +108,16 @@ footer i {
     }
 }
 
+@media only screen and (min-width: 600px){
+    main {
+        min-width: 560px;
+        max-width: 850px;
+        width: 60%;
+        margin: auto;
+        padding-top: 50px;
+    }
+}
+
 @media only screen and (min-width: 840px){
     header {
         background-color: grey;
@@ -114,11 +125,5 @@ footer i {
     nav a {
         display: inline;
         margin: 20px 10px;
-    }
-    main {
-        max-width: 850px;
-        width: 60%;
-        margin: auto;
-        padding-top: 50px;
     }
 }

@@ -1,0 +1,22 @@
+var members = [
+    "AJ",
+    "Angelina",
+    "Chris",
+    "Christine",
+    "Francine",
+    "Hayley",
+    "Izzie",
+    "Jacky",
+    "Julia",
+    "Justin",
+    "Kate",
+    "Melody",
+    "Mico",
+    "Nicky",
+    "Steph D",
+    "Steph W",
+    "Tracey",
+    "Ian",
+    "Kyara",
+    "Kyle"
+]
