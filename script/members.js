@@ -8,7 +8,7 @@ function findName(URL){
 }
 
 var selectedMember = $('.member-column').children();
-$(selectedMember).on('click',function(){
+$(selectedMember).on('click', function(){
     var src = $(this).attr('src');
     var name = findName(src);
     console.log(src,name);
@@ -18,6 +18,6 @@ $(selectedMember).on('click',function(){
     $('.modal').css("display","block");
 });
 
-$('.close-modal').on('click',function(){
+$('.close-modal').on('click', function(){
     $('.modal').css("display","none");
 });

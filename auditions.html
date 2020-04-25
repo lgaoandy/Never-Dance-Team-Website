@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Never Offical</title>
+        <link rel="icon" href="../images/never.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
+        <link rel="stylesheet" href="../styling/general.css">
+        <link rel="stylesheet" href="../styling/auditions.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+        <script type="text/javascript" src="../script/auditions.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../images/never.png" alt="Never" class="header-logo">
+                    <h1>Never</h1>
+                </a>
+            </div>
+            <nav>
+                <a href="index.html">About Us</a>
+                <a href="members.html">Members</a>
+                <a href="auditions.html">Auditions</a>
+            </nav>
+        </header>
+        <main>
+            <form action="andygaoofficial@gmail.com" method="post" enctype="text/plain">
+                <div class="form-container" form-no="1">
+                    <label for="firstname">First Name</label>
+                    <input type="text" placeholder="First Name" name="firstname">
+
+                    <label for="lastname">Last Name</label>
+                    <input type="text" placeholder="Last Name" name="lastname">
+
+                    <label for="age">Age</label>
+                    <input type="number" min="1" max="100" name="age">
+
+                    <label for="email">Email Address</label>
+                    <input type="text" placeholder="ex. abc123@gmail.com" name="email">
+
+                    <label for="instagram">Instagram <span>(if applicable)</span></label>
+                    <input type="text" placeholder="ex. @renee_16" name="instagram">
+
+                    <label for="facebook">Facebook <span>(if applicable)</span></label>
+                    <input type="text" placeholder="ex. @renee.16" name="facebook">
+                </div>
+
+                <div class="form-container" form-no="2">
+                    <label for="area">Which area of Calgary do you live in?</label>
+                    <select name="area" class="area-select">
+                        <option value="" disabled selected>-- Select --</option>
+                        <option value="NE">NE</option>
+                        <option value="NW">NW</option>
+                        <option value="SE">SE</option>
+                        <option value="SW">SW</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="community" class="community-label" hidden>Which community?</label>
+                    <select name="community" class="community-select" hidden></select>
+
+                    <label for="other-community" class="other-community" hidden>What community do you live?</label>
+                    <input type="text" placeholder="ex. Airdrie" name="other-community" class="other-community" hidden>
+                    
+                    <label for="transportation">What would you attend practice regular?</label>
+                    <div class="radio transport-radio">
+                        <label><input type="radio" value="drive" name="transportation">Drive</label>
+                        <label><input type="radio" value="transit" name="transportation">Transit</label>
+                        <label><input type="radio" value="ride" name="transportation">Ride</label>
+                        <label><input type="radio" value="other" name="transportation">Other</label>
+                    </div>
+
+                    <label for="other-transportation" class="other-transportation" hidden>Indicate other transportation methods.</label>
+                    <input type="text" placeholder="ex. Walking" name="other-transportation" class="other-transportation" hidden>
+                    
+                    <label for="curfew">Do you have a curfew?</label>
+                    <div class="radio curfew-radio">
+                        <label><input type="radio" value="yes" name="curfew">Yes</label>
+                        <label><input type="radio" value="no" name="curfew">No</label>
+                    </div>
+                    
+                    <label name="curfewtime" class="curfew-time" hidden>What time is your curfew</label>
+                    <input type="time" name="curfewtime" class="curfew-time" hidden>
+
+                    <label>Are you avaliable Fridays 3-8PM?</label>
+                    <div class="radio availability-radio">
+                        <label><input type="radio" value="yes">Yes</label>
+                        <label><input type="radio" value="no">No</label>
+                        <label><input type="radio" value="partially">Partially</label>
+                    </div>
+
+                    <label name="availability" class="availability" hidden>Indicate your availability on Fridays.</label>
+                    <input type="text" name="availability" class="availability" hidden>
+                </div>
+
+                <div class="form-container" form-no="3">
+                    <label>What is your dancing experience?</label>
+                    <input type="text">
+
+                    <label>Are you in any dance group/teams/take classes at any studios?</label>
+                    <input type="text">
+
+                    <label>How would you rate your dancing?</label>
+                    <input type="range" min="1" max="5" step="1" value="1">
+
+                    <label>Why are you interested in joining us?</label>
+                    <input type="text">
+    
+                    <label>Please import your audition video</label>
+                    <input type="file">
+
+                    <label>
+                        Thank you for your interest in NEVER, our manager will be in contact with you!
+                    </label>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <a href="https://www.instagram.com/neverofficialyyc/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/neverofficialyyc/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCN76HJCEOipjDLIB5bYMexw/" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </footer>
+    </body>
+</html>

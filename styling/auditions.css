@@ -1,0 +1,43 @@
+.form-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    font-weight: 550;
+    padding-top: 15px;
+    align-self: start;
+}
+
+.form-container label span {
+    font-weight: 400;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select {
+    padding: 0.5em;
+    border: 1px grey solid;
+    border-radius: 3px;
+}
+
+/* Customized radio buttons */
+.radio {
+    display: flex;
+}
+.radio label input{
+    display: none;
+}
+.radio label {
+    padding: 3px 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: gainsboro;
+}
+.radio label:hover,
+.radio label:focus{
+    cursor: pointer;
+}
+

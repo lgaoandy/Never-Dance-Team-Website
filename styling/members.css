@@ -42,6 +42,7 @@
     }
 }
 
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -81,7 +82,7 @@
 }
 
 .close-modal:hover,
-.close-modal:focus {
+.close-modal:focus{
     cursor: pointer;
     text-decoration: none;
     color: #bbb;

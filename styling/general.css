@@ -21,6 +21,7 @@ header {
     font-family: 'Squada One', cursive;
     width: 100%;
     height: auto;
+    min-height: 10vh;
 }
 header a {
     color: white;
@@ -49,6 +50,7 @@ nav a:hover {
     color: lightblue;
 }
 main {
+    min-height: 90vh;
     margin: 25px 40px;
 }
 em {
@@ -57,11 +59,10 @@ em {
     color: grey;
 }
 footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     background-color: rgb(78, 78, 78, 0.7);
     padding: 10px 0;
+    margin-top: 15px;
     font-size: 24px;
 }
 footer a {
