@@ -239,9 +239,9 @@ $(document).on('change', '.area-select', function(){
     if (value !== 'other'){
         var options = generateSelectOptions(value);
         $('.community-select').empty().append(options);
-        $('.other-community').prop('hidden', true);
-        $('.community-label').prop('hidden', false);
-        $('.community-select').prop('hidden', false);
+        $('.other-community').fadeOut();
+        $('.community-label').fadeIn();
+        $('.community-select').fadeIn();
     }
     else {
         $('.community-label').prop('hidden', true);
@@ -268,18 +268,54 @@ $(document).on('click', '.transport-radio label input', function(){
 
 $(document).on('click', '.curfew-radio label input', function(){
     if (this.value === 'yes'){
-        $('.curfew-time').prop('hidden', false);
+        $('.curfew-time').fadeIn('fast');
     }
     else {
-        $('.curfew-time').prop('hidden', true);
+        $('.curfew-time').fadeOut('fast');
     }
 });
 
 $(document).on('click', '.availability-radio label input', function(){
     if (this.value === 'partially'){
-        $('.availability').prop('hidden', false);
+        $('.availability').fadeIn('fast');
     }
     else {
-        $('.availability').prop('hidden', true);
+        $('.availability').fadeOut('fast');
     }
+});
+
+$(document).on('input', '.skill-slider', function(){
+    var value = this.value;
+    var level;
+    switch (value){
+        case '1':
+            level = 'Inexperienced';
+            break;
+        case '2':
+            level = "Casual";
+            break;
+        case '3':
+            level = "Beginner";
+            break;
+        case '4':
+            level = "Dance Trainee";
+            break;
+        case '5':
+        case '6':
+            level = "Intermediate";
+            break;
+        case '7':
+            level = "Advanced";
+            break;
+        case '8':
+            level = "Professional";
+            break;
+        case '9':
+            level = "Lead Dancer";
+            break;
+        case '10':
+            level = "Main Dancer";
+            break;
+    }
+    $('.slider-value').empty().append(level);
 });

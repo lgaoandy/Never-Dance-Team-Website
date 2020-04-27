@@ -1,6 +1,6 @@
 .form-container {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     display: flex;
     flex-direction: column;
 }
@@ -9,6 +9,7 @@
     font-weight: 550;
     padding-top: 15px;
     align-self: start;
+    text-align: left;
 }
 
 .form-container label span {
@@ -17,7 +18,11 @@
 
 .form-container input[type="text"],
 .form-container input[type="number"],
-.form-container select {
+.form-container input[type="time"],
+.form-container select,
+.form-container textarea {
+    margin-top: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 0.5em;
     border: 1px grey solid;
     border-radius: 3px;
@@ -41,3 +46,37 @@
     cursor: pointer;
 }
 
+.skill-slider {
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.skill-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #03a9f4;
+    border-radius: 25px;
+}
+.skill-slider::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+
+.slider-wrap {
+    display: flex;
+    flex-direction: column;
+}
+.slider-value {
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+textarea {
+    resize: none;
+}

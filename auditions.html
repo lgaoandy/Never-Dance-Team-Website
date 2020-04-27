@@ -94,24 +94,30 @@
                     </div>
 
                     <label name="availability" class="availability" hidden>Indicate your availability on Fridays.</label>
-                    <input type="text" name="availability" class="availability" hidden>
+                    <input type="text" name="availability" placeholder="ex. available 5-8PM; have piano practice at 3PM" class="availability" hidden>
                 </div>
 
                 <div class="form-container" form-no="3">
-                    <label>What is your dancing experience?</label>
-                    <input type="text">
+                    <label for="experience">What is your dancing experience?</label>
+                    <input type="text" placeholder="ex. 2 years of hiphop" name="experience">
 
-                    <label>Are you in any dance group/teams/take classes at any studios?</label>
-                    <input type="text">
+                    <label for="commitment">Are you currently in other dance commitments?</label>
+                    <input type="text" placeholder="" name="commitment">
 
-                    <label>How would you rate your dancing?</label>
-                    <input type="range" min="1" max="5" step="1" value="1">
+                    <label for="skill">How would you rate your skill level for dancing?</label>
+                    <div class="slider-wrap">
+                        <div class="slider-value">Inexperienced</div>
+                        <input type="range" min="1" max="10" step="1" value="1" name="skill" class="skill-slider">
+                    </div>
 
-                    <label>Why are you interested in joining us?</label>
-                    <input type="text">
+                    <label for="why">Why are you interested in joining us?</label>
+                    <textarea type="text" name="why" rows="4"></textarea>
+
+                    <label for="favourite">What are your favourite KPOP groups?</label>
+                    <textarea type="text" name="favourite" rows="2"></textarea>
     
-                    <label>Please import your audition video</label>
-                    <input type="file">
+                    <label for="video">Submit your audition video</label>
+                    <input type="file" name="video">
 
                     <label>
                         Thank you for your interest in NEVER, our manager will be in contact with you!
