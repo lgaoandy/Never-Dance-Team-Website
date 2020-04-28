@@ -22,14 +22,24 @@
                 </a>
             </div>
             <nav>
-                <a href="index.html">About Us</a>
-                <a href="members.html">Members</a>
-                <a href="auditions.html">Auditions</a>
+                <a href="index.html">about us</a>
+                <a href="members.html">members</a>
+                <a href="auditions.html">auditions</a>
+                <a href="contact.html">contact us</a>
             </nav>
         </header>
         <main>
-            <form action="andygaoofficial@gmail.com" method="post" enctype="text/plain">
-                <div class="form-container" form-no="1">
+            <form class="audition-form" action="andygaoofficial@gmail.com" method="post" enctype="text/plain">
+                <div class="form-steps">
+                    <span class="step active" form-no="1"></span>
+                    <span class="step" form-no="2"></span>
+                    <span class="step" form-no="3"></span>
+                    <span class="step" form-no="4"></span>
+                </div>
+                
+                <div class="form-container active" form-no="1">
+                    <h3>1. Contact Information</h3>
+
                     <label for="firstname">First Name</label>
                     <input type="text" placeholder="First Name" name="firstname">
 
@@ -38,6 +48,13 @@
 
                     <label for="age">Age</label>
                     <input type="number" min="1" max="100" name="age">
+
+                    <label for="gender">Gender</label>
+                    <select name="gender">
+                        <option value="" selected disabled></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
 
                     <label for="email">Email Address</label>
                     <input type="text" placeholder="ex. abc123@gmail.com" name="email">
@@ -50,6 +67,8 @@
                 </div>
 
                 <div class="form-container" form-no="2">
+                    <h3>2. Transportation & Availability</h3>
+
                     <label for="area">Which area of Calgary do you live in?</label>
                     <select name="area" class="area-select">
                         <option value="" disabled selected>-- Select --</option>
@@ -66,7 +85,7 @@
                     <label for="other-community" class="other-community" hidden>What community do you live?</label>
                     <input type="text" placeholder="ex. Airdrie" name="other-community" class="other-community" hidden>
                     
-                    <label for="transportation">What would you attend practice regular?</label>
+                    <label for="transportation">What would you attend practice regularly?</label>
                     <div class="radio transport-radio">
                         <label><input type="radio" value="drive" name="transportation">Drive</label>
                         <label><input type="radio" value="transit" name="transportation">Transit</label>
@@ -98,7 +117,9 @@
                 </div>
 
                 <div class="form-container" form-no="3">
-                    <label for="experience">What is your dancing experience?</label>
+                    <h3>3. Skills and Experience</h3>
+
+                    <label for="experience">What is your dance experience?</label>
                     <input type="text" placeholder="ex. 2 years of hiphop" name="experience">
 
                     <label for="commitment">Are you currently in other dance commitments?</label>
@@ -113,15 +134,23 @@
                     <label for="why">Why are you interested in joining us?</label>
                     <textarea type="text" name="why" rows="4"></textarea>
 
-                    <label for="favourite">What are your favourite KPOP groups?</label>
-                    <textarea type="text" name="favourite" rows="2"></textarea>
-    
-                    <label for="video">Submit your audition video</label>
-                    <input type="file" name="video">
+                    <label for="favourite">What is your favourite KPOP dance?</label>
+                    <input type="text" name="favourite">
+                </div>
 
-                    <label>
-                        Thank you for your interest in NEVER, our manager will be in contact with you!
-                    </label>
+                <div class="form-container" form-no="4">
+                    <h3>4. Audition Video</h3>
+
+                    <label for="video">Audition Clip</label>
+                    <span>ONLY MP4, MOV or AVI files. At least 1 minute</span>
+                    <input type="file" name="video" accept="video/*">
+                </div>
+
+
+                <div class="form-control">
+                    <button type="button" class="previous">Previous</button>
+                    <button type="submit" class="submit active" disabled>Apply</button>
+                    <button type="button" class="next active">Next</button>
                 </div>
             </form>
         </main>

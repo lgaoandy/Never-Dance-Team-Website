@@ -244,9 +244,9 @@ $(document).on('change', '.area-select', function(){
         $('.community-select').fadeIn();
     }
     else {
-        $('.community-label').prop('hidden', true);
-        $('.community-select').prop('hidden', true);
-        $('.other-community').prop('hidden', false);
+        $('.community-label').fadeOut();
+        $('.community-select').fadeOut();
+        $('.other-community').fadeIn();
     }
 });
 
@@ -318,4 +318,67 @@ $(document).on('input', '.skill-slider', function(){
             break;
     }
     $('.slider-value').empty().append(level);
+});
+
+function checkButtons(step){
+    // activate previous and/or next button
+    if (step === 1){
+        $('.form-control').find('button.previous').removeClass('active');
+    }
+    else if (step === 2 || step === 3){
+        $('.form-control').find('button.next').addClass('active');
+        $('.form-control').find('button.previous').addClass('active');
+    }
+    else if (step === 4){
+        $('.form-control').find('button.next').removeClass('active');
+    }
+
+    // change next with submit button in the last step
+    if (step === 4){
+        $('.form-control').find('button.next').css('display','none');
+        $('.form-control').find('button.submit').css('display','block').prop('disabled',false);
+    }
+    else {
+        $('.form-control').find('button.next').css('display','block');
+        $('.form-control').find('button.submit').css('display','none').prop('disabled',true);
+    }
+}
+
+// Next button
+$(document).on('click', '.form-control button.next', function(){
+    // 1 - detect which form
+
+    // 2 - validate form
+
+    // 3 - finds next form
+    var activestep = $('.form-steps').find('span.active').attr('form-no');
+    var nextstep = parseInt(activestep)+1;
+    if (nextstep <= 4){
+        $('.audition-form').fadeOut(200,function(){
+            $('.form-steps').find('span.active').removeClass('active').addClass('finish');
+            $('.form-steps').find('span[form-no='+nextstep+']').addClass('active');
+        
+            $('form').find('.form-container.active').removeClass('active').addClass('finish');
+            $('form').find('.form-container[form-no="'+nextstep+'"]').addClass('active');
+            checkButtons(nextstep);
+            $('.audition-form').fadeIn(200);
+        });
+    }
+});
+
+// Previous button
+$(document).on('click', '.form-control button.previous', function(){
+    var activestep = $('.form-steps').find('span.active').attr('form-no');
+    var prevstep = parseInt(activestep)-1;
+    if (prevstep >= 1){
+        $('.audition-form').fadeOut(200,function(){
+            $('.form-steps').find('span.active').removeClass('active');
+            $('.form-steps').find('span[form-no='+prevstep+']').addClass('active');
+        
+            $('form').find('.form-container.active').removeClass('active').addClass('finish');
+            $('form').find('.form-container[form-no="'+prevstep+'"]').addClass('active');
+            checkButtons(prevstep);
+            $('.audition-form').fadeIn(200);
+        });
+    }
 });
