@@ -10,6 +10,7 @@
     padding-top: 15px;
     align-self: start;
     text-align: left;
+    text-transform: uppercase;
 }
 .form-container span {
     color: rgb(129, 129, 129);
@@ -20,6 +21,7 @@
 
 .form-container label span {
     font-weight: 400;
+    
 }
 .form-container input[type="text"],
 .form-container input[type="number"],
@@ -137,4 +139,7 @@ button[type="submit"] {
 }
 .step.finish {
     background-color: lightblue;
+}
+.form-steps span.step {
+    cursor: pointer;
 }

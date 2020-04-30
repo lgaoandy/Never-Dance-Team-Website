@@ -9,14 +9,14 @@
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
         <link rel="stylesheet" href="../styling/general.css">
-        <link rel="stylesheet" href="../styling/auditions.css">
+        <link rel="stylesheet" href="../styling/auditionform.css">
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-        <script type="text/javascript" src="../script/auditions.js" defer></script>
+        <script type="text/javascript" src="../script/auditionform.js" defer></script>
     </head>
     <body>
         <header>
             <div class="logo-container">
-                <a href="index.html">
+                <a href="index.html"><script src=""></script>
                     <img src="../images/never.png" alt="Never" class="header-logo">
                     <h1>Never</h1>
                 </a>
@@ -24,12 +24,12 @@
             <nav>
                 <a href="index.html">about us</a>
                 <a href="members.html">members</a>
-                <a href="auditions.html">auditions</a>
+                <a href="audition.html">audition</a>
                 <a href="contact.html">contact us</a>
             </nav>
         </header>
         <main>
-            <form class="audition-form" action="andygaoofficial@gmail.com" method="post" enctype="text/plain">
+            <form class="audition-form" method="post" enctype="text/plain">
                 <div class="form-steps">
                     <span class="step active" form-no="1"></span>
                     <span class="step" form-no="2"></span>
@@ -71,7 +71,7 @@
 
                     <label for="area">Which area of Calgary do you live in?</label>
                     <select name="area" class="area-select">
-                        <option value="" disabled selected>-- Select --</option>
+                        <option value="" disabled selected></option>
                         <option value="NE">NE</option>
                         <option value="NW">NW</option>
                         <option value="SE">SE</option>
@@ -79,7 +79,7 @@
                         <option value="other">Other</option>
                     </select>
 
-                    <label for="community" class="community-label" hidden>Which community?</label>
+                    <label for="community" class="community-label" hidden>Community?</label>
                     <select name="community" class="community-select" hidden></select>
 
                     <label for="other-community" class="other-community" hidden>What community do you live?</label>
@@ -113,7 +113,7 @@
                     </div>
 
                     <label name="availability" class="availability" hidden>Indicate your availability on Fridays.</label>
-                    <input type="text" name="availability" placeholder="ex. available 5-8PM; have piano practice at 3PM" class="availability" hidden>
+                    <input type="text" name="availability" placeholder="ex. available 5-8PM" class="availability" hidden>
                 </div>
 
                 <div class="form-container" form-no="3">
@@ -145,7 +145,6 @@
                     <span>ONLY MP4, MOV or AVI files. At least 1 minute</span>
                     <input type="file" name="video" accept="video/*">
                 </div>
-
 
                 <div class="form-control">
                     <button type="button" class="previous">Previous</button>
