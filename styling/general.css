@@ -85,7 +85,6 @@ button:active {
     max-width: 50%;
 }
 .lastest-cover {
-    border: 10px solid lightgrey;
     overflow: hidden;
     padding-top: 56.25%;
     position: relative;

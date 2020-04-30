@@ -26,4 +26,11 @@
 }
 .studio-pic {
     opacity: 0.8;
+    align-self: center;
+    transition: 0.3s;
+}
+.studio-pic:hover,
+.studio-pic:active {
+    opacity: 1;
+    transition: 0.3s;
 }

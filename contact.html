@@ -6,9 +6,10 @@
         <title>Never Offical</title>
         <link rel="icon" href="../images/never.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
         <link rel="stylesheet" href="../styling/general.css">
+        <link rel="stylesheet" href="../styling/contact.css">
     </head>
     <body>
         <header>
@@ -25,24 +26,26 @@
                 <a href="contact.html">contact us</a>
             </nav>
         </header>
-        <main>
-            <p>
-                Formed in 2015, <em>Never</em> is a K-Pop cover dance performance crew based in Calgary, AB
-            </p><br>
-            <p>
-                <em>NE</em> stands "any" and <em>VER</em> means "version"
-            </p>
-            <p>
-                We come together to create "any version" of various dance performances in different styles. 
-                Just like how fast the moon phases, our dancers adapt and learn quickly 
-            </p><br>
-            <p>Check out some of our lastest cover!</p><br>
-            <div class="lastest-cover">
-                <iframe width="160" height="90" src="https://www.youtube.com/embed/UaDNQRjlJdo"
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-                </iframe>
-            </div>
+        <main class="main-container">
+            <h3>Contact Us</h3>
+            <p>Before emailing us, please refer to the 
+                <a class="faq-link" href="faq.html">FAQ</a>
+                to find answers to the most commonly asked questions</p>
+            <form class="form-container">
+                <label>Name</label>
+                <input type="text"><br>
+                
+                <label>Email</label>
+                <input type="email"><br>
+
+                <label>Phone Number</label>
+                <input type="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+                <label>Message</label>
+                <textarea></textarea><br>
+
+                <button>Send</button>
+            </form>
         </main>
         <footer>
             <a href="https://www.instagram.com/neverofficialyyc/" target="_blank">
