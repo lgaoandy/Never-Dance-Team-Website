@@ -1,45 +1,15 @@
 /* Specific classes */
-.member-row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 150px;
-  }
-  
-/* Create four equal columns that sits next to each other */
-.member-column {
-    flex: 15%;
-    max-width: 25%;
-    padding: 0 4px;
+.member-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    align-items: center;
 }
-
-.member-column img {
-    cursor: pointer;
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+.member-container img {
+    max-width: 200px;
 }
-
-.member-column img:hover {
-    opacity: 0.9;
-    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .member-column {
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .member-column {
-        flex: 100%;
-        max-width: 100%;
-    }
+.footer-space {
+    height: 20vh;
 }
 
 /* Modal */
@@ -52,7 +22,6 @@
     top: 0;
     background-color: rgba(0,0,0,0.9);
 }
-
 .modal-container {
     height: 100%;
     display: flex;
@@ -60,17 +29,14 @@
     justify-content: center;
     align-items: center;
 }
-
 .modal-image {
     max-height: 50vh;
 }
-
 .modal-caption {
     display: block;
     padding-top: 10px;
     color: white;
 }
-
 .close-modal {
     position: absolute;
     top: 15px;
@@ -80,7 +46,6 @@
     font-weight: bold;
     transition: 0.3s;
 }
-
 .close-modal:hover,
 .close-modal:focus{
     cursor: pointer;
