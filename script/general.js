@@ -4,9 +4,14 @@ $(function(){
     $('footer').load('../components/footer-component.html');
 });
 
+// START
+$(document).ready(function(){
+    $('body').removeClass('fade');
+});
+
 // NAVBAR 
 $(document).on('click','.navbar-toggle', function(){
-    $('nav').slideToggle(100);
+    $('nav').slideToggle(300);
 });
 
 // BUG FIX - WHEN NAVBAR IS ADJUSTED FROM VERTICAL TO HORIZONTAL, ITS DISPLAY REQUIRES READJUSTMENTS
@@ -32,9 +37,7 @@ $(document).on('mouseover','.social-media-icon',function(){
     else if (icon === 'facebook'){
         this.src = "../images/icons/facebook-white.png";
     }
-});
-
-$(document).on('mouseout','.social-media-icon',function(){
+}).on('mouseout','.social-media-icon',function(){
     var icon = $(this).attr('icon');
     if (icon === 'youtube'){
         this.src = "../images/icons/youtube.png";
@@ -46,4 +49,5 @@ $(document).on('mouseout','.social-media-icon',function(){
         this.src = "../images/icons/facebook.png";
     }
 });
+
 

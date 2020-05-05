@@ -1,18 +1,46 @@
-/* Specific classes */
+/* ---------------------
+    MEMBERS MAIN
+----------------------*/
 .member-container {
+    justify-content: center;
+    justify-items: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
     align-items: center;
 }
-.member-container img {
-    max-width: 200px;
+.member {
+    cursor: pointer;
+    width: 150px;
+}
+.member img {
+    width: 100%;
+    max-height: 150px;
+    filter: grayscale(100%);
+}
+.member img:hover,
+.member img:Active {
+    filter: none;
+    transition: 0.5s;
+    border: 3px rgb(29, 113, 146) solid;
 }
 .footer-space {
     height: 20vh;
 }
+@media only screen and (min-width: 560px){
+    .member-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (min-width: 800px){
+    .member-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
-/* Modal */
+/* ---------------------
+    MODAL
+----------------------*/
 .modal {
     display: none;
     position: fixed;
@@ -70,3 +98,4 @@
     from {transform:scale(0)} 
     to {transform:scale(1)}
 }
+

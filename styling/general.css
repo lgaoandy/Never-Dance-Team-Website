@@ -22,6 +22,8 @@
     box-sizing: border-box;
 }
 body {
+    opacity: 1;
+    transition: 1.0s opacity;
     font-size: 14px;
     font-family: "Lato";
     text-align: center;
@@ -37,6 +39,10 @@ body {
         rgb(130, 130, 130)
     );
     height: 100%;
+}
+body.fade {
+    opacity: 0;
+    transition: none;
 }
 a { 
     text-decoration: none;
@@ -77,6 +83,15 @@ header {
     width: 100%;
     min-height: 100px;
     border-bottom: 0.5px solid rgb(75, 75, 75);
+}
+.header-logo {
+    filter: brightness(800%);
+}
+.header-logo:hover,
+.header-logo:active {
+    filter: none;
+    transition: 0.5s;
+    padding: 10px;
 }
 .navbar-toggle {
     position: absolute;
@@ -186,7 +201,7 @@ footer {
     }
     .nav-link:hover,
     .nav-link:active {
-        transition: 0.1s;
-        border-bottom: 1px solid white;
+        transition: 0.3s;
+        border-bottom: 1px groove white;
     }
 }
