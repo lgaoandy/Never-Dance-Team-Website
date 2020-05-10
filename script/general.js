@@ -4,50 +4,33 @@ $(function(){
     $('footer').load('../components/footer-component.html');
 });
 
-// START
+// START ANIMATION
 $(document).ready(function(){
     $('body').removeClass('fade');
 });
 
-// NAVBAR 
+// NAVBAR - INTERACTIVE BURGER FOR MOBILE DEVICES
 $(document).on('click','.navbar-toggle', function(){
-    $('nav').slideToggle(300);
+    $('.navbar-wrapper').slideToggle(300);
 });
 
-// BUG FIX - WHEN NAVBAR IS ADJUSTED FROM VERTICAL TO HORIZONTAL, ITS DISPLAY REQUIRES READJUSTMENTS
+// RESET CSS OF NAVBAR WHEN RESIZING
 $(window).resize(function(){
-    var width = $(window).width();
-    if (width >= 783) {
-        $('nav').css('display','flex');
-    }
+    $('.navbar-wrapper').removeAttr('style');
+});
+
+window.onscroll = function() {shrinkNav()};
+
+function shrinkNav() {
+    // console.log(document.documentElement.clientWidth, window.innerWidth);
+    if (document.documentElement.scrollTop > 0 && window.innerWidth >= 800) {
+        $('.header-logo').clearQueue().animate({"height": "60px"}, 100);
+        $('.header-wrapper').clearQueue().animate({"min-height" : "60px"}, 100);
+        $('header').clearQueue().animate({"opacity" : "0.93"}, 1000);
+    } 
     else {
-        $('nav').css('display','none');
+        $('.header-logo').clearQueue().animate({"height": "100px"}, 100);
+        $('.header-wrapper').clearQueue().animate({"min-height" : "100px"}, 100);
+        $('header').clearQueue().animate({"opacity" : "1.0"}, 1000);
     }
-});
-
-// RESPONSIVB SOCIAL MEDIA ICONS 
-$(document).on('mouseover','.social-media-icon',function(){
-    var icon = $(this).attr('icon');
-    if (icon === 'youtube'){
-        this.src = "../images/icons/youtube-white.png";
-    }
-    else if (icon === 'instagram'){
-        this.src = "../images/icons/instagram-white.png";
-    }
-    else if (icon === 'facebook'){
-        this.src = "../images/icons/facebook-white.png";
-    }
-}).on('mouseout','.social-media-icon',function(){
-    var icon = $(this).attr('icon');
-    if (icon === 'youtube'){
-        this.src = "../images/icons/youtube.png";
-    }
-    else if (icon === 'instagram'){
-        this.src = "../images/icons/instagram.png";
-    }
-    else if (icon === 'facebook'){
-        this.src = "../images/icons/facebook.png";
-    }
-});
-
-
+}

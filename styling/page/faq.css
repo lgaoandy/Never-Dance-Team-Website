@@ -1,0 +1,29 @@
+.faq-container {
+    font-size: 14px;
+    text-align: start;
+}
+.faq-title {
+    text-align: center;
+}
+.faq-question {
+    display: block;
+    font-weight: 550;
+    margin-top: 15px;
+}
+.faq-question i{
+    font-weight: 400;
+}
+.faq-answer,
+.faq-description {
+    line-height: 18px;
+    padding-left: 20px;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+}
+.audition-intro {
+    margin: 8px 0;
+    font-size: 14px;
+}

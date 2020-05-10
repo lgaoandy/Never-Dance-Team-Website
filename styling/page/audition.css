@@ -1,0 +1,28 @@
+main {
+    max-width: unset;
+}
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.button-container {
+    height: 80px;
+}
+.audition-button {
+    margin-top: 10px;
+}
+.studio-pic {
+    opacity: 0.8;
+    transition: 0.3s;
+    width: 100%;
+}
+.studio-pic:hover,
+.studio-pic:active {
+    opacity: 1;
+    transition: 0.3s;
+}
+@media only screen and (min-width: 1000px){
+    .main-container {
+        max-width: 90vmin;
+    }
+}

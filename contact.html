@@ -6,34 +6,41 @@
         <title>Contact Us | Never Offical</title>
         <link rel="icon" href="../images/logos/never-white-circle.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
-        <link rel="stylesheet" href="../styling/general.css">
-        <link rel="stylesheet" href="../styling/contact.css">
+        <link rel="stylesheet" href="../styling/common/general.css">
+        <link rel="stylesheet" href="../styling/common/forms.css">
+        <link rel="stylesheet" href="../styling/common/buttons.css">
+        <link rel="stylesheet" href="../styling/common/links.css">
+        <link rel="stylesheet" href="../styling/page/contact.css">
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
         <script src="../script/general.js" defer></script>
     </head>
     <body class="fade">
         <header></header>
-        <main class="main-container">
-            <h3 class="page-title">Contact Us</h3>
-            <hr class="title-divider">
-            <p>Before emailing us, please refer to the 
-                <a class="faq-link" href="faq.html">FAQ</a>
-                to find answers to the most commonly asked questions</p>
-            <form class="form-container">
-                <label>Name</label>
-                <input type="text"><br>
-                
-                <label>Email</label>
-                <input type="email"><br>
-
-                <label>Phone Number</label>
-                <input type="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
-
-                <label>Message</label>
-                <textarea></textarea><br>
-
-                <button>Send</button>
-            </form>
+        <main>
+            <div class="main-container">
+                <h3 class="page-title">Contact Us</h3>
+                <hr class="title-divider">
+                <p>Before emailing us, please refer to the 
+                    <a class="faq-link text-link" href="faq.html">FAQ</a>
+                    to find answers to the most commonly asked questions</p>
+                <form class="form-container">
+                    <label>Name</label>
+                    <input type="text"><br>
+    
+                    <label>Email</label>
+                    <input type="email"><br>
+    
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+    
+                    <label>Message</label>
+                    <textarea></textarea><br>
+    
+                    <div class="button-container">
+                        <button class="stylized-button">Send</button>
+                    </div>
+                </form>
+            </div>
         </main>
         <footer></footer>
     </body>

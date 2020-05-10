@@ -1,0 +1,15 @@
+input, textarea, select {
+    font-size: 15px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+textarea, select {
+    font-family: "Lato";
+    border: none;
+}
+textarea {
+    resize: none;
+}

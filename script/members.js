@@ -1,23 +1,29 @@
-// find the name of the file - by removing the URL
-function findName(URL){
-    var urlLength = URL.split("/").length;
-    var urlName = URL.split("/")[urlLength-1];
-    urlName = urlName.split(".")[0];
-    urlName = urlName.replace("_"," ");
-    return urlName;
-}
+// console.log(covers);
 
-var selectedMember = $('.member-column').children();
-$(selectedMember).on('click', function(){
+$('.member img').on('click', function(){
     var src = $(this).attr('src');
-    var name = findName(src);
-    console.log(src,name);
+    var name = $(this).attr('member');
+    
+    $('.modal-list').empty();
+    $.each(covers, function(i, cover){
+        let roleCovered;
+        $.each(cover.roles, function(i, role){
+            if (name === role.member){
+                roleCovered = role.role;
+            }
+        });
+
+        if (roleCovered !== undefined){
+            let coverInvolved = '<p>' + cover.song + ' - ' + cover.artist + ' as <span class="cover-role">' + roleCovered + '</span></p>';
+            $('.modal-list').append(coverInvolved);
+        }
+    });
     
     $('.modal-image').attr('src',src);
-    $('.modal-caption').empty().append(name);
+    $('.modal-name').empty().append(name);
     $('.modal').css("display","block");
 });
 
-$('.close-modal').on('click', function(){
+$('.modal').on('click', function(){
     $('.modal').css("display","none");
 });

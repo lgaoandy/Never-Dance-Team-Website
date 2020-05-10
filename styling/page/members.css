@@ -1,0 +1,117 @@
+/* ---------------------
+    MEMBERS MAIN
+----------------------*/
+.member-container {
+    justify-content: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    align-items: center;
+}
+.member {
+    width: 150px;
+    padding: 5px;
+}
+.member img {
+    cursor: pointer;
+    width: 100%;
+    max-height: 150px;
+    filter: grayscale(100%);
+}
+.member img:hover,
+.member img:focus {
+    filter: none;
+    outline: none;
+    border: 4px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgb(102, 102, 179), rgb(110, 218, 218));
+    transition: 0.5s;
+}
+@media only screen and (min-width: 560px){
+    .member-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (min-width: 800px){
+    .member-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ---------------------
+    MODAL
+----------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+}
+.modal:hover {
+    cursor: pointer;
+}
+.modal-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-image {
+    height: 50vh;
+}
+.modal-name {
+    display: block;
+    padding: 10px 0;
+    font-family: 'Roboto-condensed';
+    font-weight: 550;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.modal-featured {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    font-family: 'Roboto-condensed';
+    font-weight: 550;
+    text-transform: uppercase;
+}
+.feature-divider {
+    margin-bottom: 10px;
+}
+.close-modal {
+    position: relative;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close-modal:hover,
+.close-modal:focus{
+    cursor: pointer;
+    text-decoration: none;
+    color: #bbb;
+}
+
+/* Add Animation */
+.modal {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s; 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}

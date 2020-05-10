@@ -1,0 +1,220 @@
+@font-face {
+    src: url(../../fonts/Lovelo-LineBold.ttf);
+    font-family: "Lovelo-bold";
+}
+
+@font-face {
+    src: url(../../fonts/RobotoCondensed-Regular.ttf);
+    font-family: "Roboto-condensed";
+}
+
+@font-face {
+    src: url(../../fonts/Lato-Regular.ttf);
+    font-family: "Lato";
+}
+
+@font-face {
+    src: url(../../fonts/Lato-Light.ttf);
+    font-family: "Lato-light";
+}
+
+/* ------------------------- 
+    GENERAL
+------------------------- */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    opacity: 1;
+    transition: 0.7s opacity;
+    font-size: 16px;
+    font-family: "Lato";
+    text-align: center;
+    background: #F1F1F1;
+    background-image: linear-gradient(
+        rgb(180, 180, 180),
+        rgb(230, 230, 230),
+        rgb(245, 245, 245),
+        rgb(250, 250, 250),
+        rgb(245, 245, 245),
+        rgb(230, 230, 230),
+        rgb(180, 180, 180),
+        rgb(130, 130, 130)
+    );
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: overlay;
+}
+body.fade {
+    opacity: 0;
+    transition: none;
+}
+a { 
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 22px;
+}
+em {
+    font-weight: 550;
+    text-transform: uppercase;
+    color: grey;
+}
+
+/* ------------------------- 
+    HEADER & NAVIGATION
+------------------------- */
+header {
+    background-color: #1A1C23;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: rgb(205, 205, 205);
+    z-index: 10;
+}
+.header-wrapper {
+    width: 100%;
+    min-height: 100px;
+    border-bottom: 0.5px solid rgb(75, 75, 75);
+}
+.header-logo {
+    filter: brightness(800%);
+}
+.header-logo:hover,
+.header-logo:focus {    
+    filter: none;
+    transition: 0.5s;
+    padding: 10px;
+}
+.navbar-toggle {
+    position: absolute; 
+    top: 30px;
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    cursor: pointer;
+}
+.navbar-icon {
+    max-width: 30px;
+}
+.header-logo {
+    height: 100px;
+    padding: 12px;
+}
+.navbar-wrapper {
+    display: none;
+    padding: 10px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+.nav-link {
+    display: block;
+    padding: 10px 15px;
+    font-family: 'Lato-light';
+    text-align: left;
+    color: rgb(205, 205, 205);
+}
+.nav-link:hover,
+.nav-link:focus {
+    transition: 0.3s;
+    color: white;
+}
+
+/* -------------------------s
+    MAIN
+------------------------- */
+main {
+    padding-top: 105px;
+    min-height: 100vh;
+}
+.main-container {
+    width: 100%;
+    max-width: 75vmin;
+    margin: auto;
+    margin-top: 35px;
+    z-index: -1;
+}
+.page-title {
+    text-transform: uppercase;
+}
+.title-divider {
+    margin: 20px;
+}
+
+/* -------------------------
+    FOOTER
+------------------------- */
+footer {
+    clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #1A1C23;
+    padding: 25px 0;
+}
+footer.footer-space {
+    margin-top: 5em;
+}
+.copyright {
+    font-family: "Lato-light";
+    font-size: 14px;
+    color: white;
+}
+.footer-links {
+    margin-top: 10px;
+}
+.social-media-icon {
+    max-width: 45px;
+    border: 3px #1A1C23 solid;
+}
+.social-media-icon:hover,
+.social-media-icon:focus {
+    filter: brightness(400%);
+    border: none;
+    transition: 0.2s;
+}
+
+/* -------------------------
+    RESPONSIVE DESIGN
+------------------------- */
+@media only screen and (max-width: 200px){
+    .logo-container {
+        display: none;
+    }
+}
+@media only screen and (min-width: 800px){
+    .header-container {
+        display: grid;
+        max-width: 1000px;
+        margin: auto;
+        grid-template-columns: 1fr 2fr;
+    }
+    .header-wrapper {
+        align-self: flex-start;
+    }
+    .navbar-toggle {
+        display: none;
+    }
+    .logo-container {
+        text-align: right;
+    }
+    .navbar-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+    .nav-link {
+        text-align: center;
+    }
+    .nav-link:hover,
+    .nav-link:active {
+        transition: 0.3s;
+        border-bottom: 1px groove white;
+    }
+}

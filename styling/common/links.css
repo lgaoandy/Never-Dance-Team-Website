@@ -1,0 +1,17 @@
+/* -------------------
+    TEXT LINKS
+--------------------*/
+.text-link {
+    color: black;
+    text-decoration: underline;
+}
+.text-link:hover,
+.text-link:focus {
+    opacity: 0.7;
+    background: linear-gradient(to right, rgb(85, 85, 202), rgb(36, 102, 102));
+    background-clip: text;
+    font-weight: 750;
+    font-size: 110%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

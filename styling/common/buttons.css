@@ -1,0 +1,45 @@
+/* ------------------------- 
+    BUTTONS
+------------------------- */
+button:hover,
+button:focus {
+    cursor: pointer;
+    outline: none;
+}
+.black-button {
+    padding: 5px 10px;
+    background-color: rgb(30, 32, 37);
+    border: 4px solid transparent;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: 0.7s;
+}
+.black-button:hover,
+.black-button:focus {
+    opacity: 1;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgb(102, 102, 179), rgb(110, 218, 218));
+    transition: 0.7s;
+}
+.stylized-button {
+    text-align: center;
+    align-self: center;
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgb(121, 121, 201), rgb(110, 218, 218));
+    border: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: 0.7s;
+}
+.stylized-button:hover,
+.stylized-button:focus {
+    opacity: 1;
+    border: 3px solid #1A1C23;
+    filter: saturate(150%);
+    transition: 0.7s;
+}
