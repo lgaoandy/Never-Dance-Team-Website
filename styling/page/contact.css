@@ -7,9 +7,6 @@
 }
 .form-container {
     margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-}
-.form-container label {
-    align-self: flex-start;
+    display: grid;
+    row-gap: 10px;
 }

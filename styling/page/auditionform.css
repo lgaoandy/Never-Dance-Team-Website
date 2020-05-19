@@ -1,7 +1,29 @@
 /* ------------------------- 
     MAIN FORM
 ------------------------- */
-
+.main-container {
+    min-width: 90vmin;
+}
+.audition-form {
+    margin-top: 100px;
+}
+.section-title {
+    align-self: start;
+    font-weight: 400;
+}
+.form-container {
+    display: none;
+    text-align: left;
+    font-family: "Roboto-condensed";
+    margin-top: 20px;
+}
+.form-container.active {
+    font-size: 16px;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 8px;
+    flex-direction: column;
+}
 
 /* ------------------------- 
     SKILL SLIDER
@@ -80,52 +102,4 @@ button.hide {
 }
 .form-steps span.step {
     cursor: pointer;
-}
-
-/* ------------------------- 
-    NEW STYLE
-------------------------- */
-main {
-    min-width: 90vmin;
-}
-.audition-form {
-    margin-top: 150px;
-}
-.section-title {
-    align-self: start;
-    font-weight: 400;
-}
-.form-container {
-    display: none;
-    text-align: left;
-    font-family: "Roboto-condensed";
-    margin-top: 20px;
-}
-.form-container.active {
-    font-size: 16px;
-    display: grid;
-    row-gap: 10px;
-    column-gap: 8px;
-    flex-direction: column;
-}
-.form-element {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border: 1px solid rgb(209, 209, 209);
-    padding: 5px;
-}
-.form-label {
-    align-self: start;
-    text-transform: uppercase;
-    font-weight: 550;
-    color: dimgrey;
-    margin: 0;
-    padding: 2px;
-}
-.form-input {
-    padding: 5px 2px;
-}
-.form-input:focus {
-    outline: none;
 }

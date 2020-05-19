@@ -4,10 +4,10 @@ $(function(){
     $('footer').load('../components/footer-component.html');
 });
 
-// START ANIMATION
-$(document).ready(function(){
-    $('body').removeClass('fade');
-});
+// PRE-lOADER
+window.addEventListener('load', () => {
+    $('.loading-icon').fadeOut('fast');
+})
 
 // NAVBAR - INTERACTIVE BURGER FOR MOBILE DEVICES
 $(document).on('click','.navbar-toggle', function(){
@@ -20,7 +20,6 @@ $(window).resize(function(){
 });
 
 window.onscroll = function() {shrinkNav()};
-
 function shrinkNav() {
     // console.log(document.documentElement.clientWidth, window.innerWidth);
     if (document.documentElement.scrollTop > 0 && window.innerWidth >= 800) {

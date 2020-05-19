@@ -7,137 +7,140 @@
         <link rel="icon" href="../images/logos/never-white-circle.png">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Squada+One">
         <link rel="stylesheet" href="../styling/common/general.css">
+        <link rel="stylesheet" href="../styling/common/transition.css">
         <link rel="stylesheet" href="../styling/common/forms.css">
         <link rel="stylesheet" href="../styling/common/buttons.css">
         <link rel="stylesheet" href="../styling/page/auditionform.css">
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-        <script src="../script/general.js" defer></script>
+        <script src="../script/general.js"></script>
         <script src="../script/auditionform.js" defer></script>
     </head>
     <body class="fade">
         <header></header>
         <main>
-            <form class="audition-form" action="auditionform.php" method="post" autocomplete="off">
-                <div class="form-steps">
-                    <span class="step active" form-no="1"></span>
-                    <span class="step" form-no="2"></span>
-                    <span class="step" form-no="3"></span>
-                    <span class="step" form-no="4"></span>
-                </div>
-                
-                <div class="form-container active" form-no="1">
-                    <h3 class="section-title">1. Contact Information</h3> 
-                    <div class="form-element">
-                        <label class="form-label" for="firstname">&lowast; First Name</label>
-                        <input class="form-input" type="text" name="firstname">
+            <div class="main-container">
+                <form class="audition-form transition-1" action="auditionform.php" method="post" autocomplete="off">
+                    <div class="form-steps">
+                        <span class="step active" form-no="1"></span>
+                        <span class="step" form-no="2"></span>
+                        <span class="step" form-no="3"></span>
+                        <span class="step" form-no="4"></span>
                     </div>
-                    <div class="form-element">
-                        <label class="form-label" for="lastname">&lowast; Last Name</label>
-                        <input class="form-input" type="text" name="lastname">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" for="birthday">&lowast; Birthday</label>
-                        <input class="form-input" type="date" name="birthday">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" for="gender">&lowast; Gender</label>
-                        <select class="form-input" name="gender">
-                            <option value="" selected disabled></option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" for="email">&lowast; Email Address</label>
-                        <input class="form-input" type="text" name="email">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" for="instagram">Instagram</label>
-                        <input class="form-input" type="text" name="instagram">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" for="facebook">Facebook</label>
-                        <input class="form-input" type="text" name="facebook">
-                    </div>
-                </div>
-
-                <div class="form-container" form-no="2">
-                    <h3 class="section-title">2. Transportation & Availability</h3>
-                    <div class="form-element">
-                        <label class="form-label" for="address">&lowast; Address</label>
-                        <input class="form-input" type="text" name="address">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" for="transportation">&lowast; Transportation method</label>
-                        <select class="form-input" name="transportation">
-                            <option value="" disabled selected></option>
-                            <option value="drive">Drive</option>
-                            <option value="transit">Transit</option>
-                            <option value="ride">Ride</option>
-                            <option value="walking">Walking</option>
-                        </select>
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" name="curfew">Curfew Time</label>
-                        <input class="form-input" type="time" name="curfew">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" name="availability">&lowast; Friday Avaliability</label>
-                        <input class="form-input" type="text" name="availability">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" name="commitment">&lowast; Will you be able to commit to Friday practices regularly?</label>
-                        <input class="form-input" type="text" name="commitment">
-                    </div>
-                </div>
-
-                <div class="form-container" form-no="3">
-                    <h3 class="section-title">3. Skills and Experience</h3>
-
-                    <div class="form-element">
-                        <label class="form-label" for="experience">&lowast; What is your dance experience?</label>
-                        <input class="form-input" type="text" name="experience">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" for="commitment">&lowast; Are you currently in other dance commitments?</label>
-                        <input class="form-input" type="text" placeholder="" name="commitment">
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label" for="skill">&lowast; How would you rate your dancing based on skills and experience?</label>
-                        <div class="slider-wrapper">
-                            <div class="slider-value">Inexperienced</div>
-                            <input type="range" min="1" max="10" step="1" value="1" name="skill" class="skill-slider">
+                    
+                    <div class="form-container active" form-no="1">
+                        <h3 class="section-title">1. Contact Information</h3> 
+                        <div class="form-element">
+                            <label class="form-label" for="firstname">&lowast; First Name</label>
+                            <input class="form-input" type="text" name="firstname">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="lastname">&lowast; Last Name</label>
+                            <input class="form-input" type="text" name="lastname">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="birthday">&lowast; Birthday</label>
+                            <input class="form-input" type="date" name="birthday">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="gender">&lowast; Gender</label>
+                            <select class="form-input" name="gender">
+                                <option value="" selected disabled></option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="email">&lowast; Email Address</label>
+                            <input class="form-input" type="text" name="email">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="instagram">Instagram</label>
+                            <input class="form-input" type="text" name="instagram">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="facebook">Facebook</label>
+                            <input class="form-input" type="text" name="facebook">
                         </div>
                     </div>
-                    <div class="form-element">
-                        <label class="form-label" for="why">&lowast; Why are you interested in joining us?</label>
-                        <textarea class="form-input" type="text" name="why" rows="4"></textarea>
+    
+                    <div class="form-container" form-no="2">
+                        <h3 class="section-title">2. Transportation & Availability</h3>
+                        <div class="form-element">
+                            <label class="form-label" for="address">&lowast; Address</label>
+                            <input class="form-input" type="text" name="address">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="transportation">&lowast; Transportation method</label>
+                            <select class="form-input" name="transportation">
+                                <option value="" disabled selected></option>
+                                <option value="drive">Drive</option>
+                                <option value="transit">Transit</option>
+                                <option value="ride">Ride</option>
+                                <option value="walking">Walking</option>
+                            </select>
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" name="curfew">Curfew Time</label>
+                            <input class="form-input" type="time" name="curfew">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" name="availability">&lowast; Friday Avaliability</label>
+                            <input class="form-input" type="text" name="availability">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" name="commitment">&lowast; Will you be able to commit to Friday practices regularly?</label>
+                            <input class="form-input" type="text" name="commitment">
+                        </div>
                     </div>
-                    <div class="form-element">
-                        <label class="form-label" for="favourite">Favourite KPOP Choreography</label>
-                        <input class="form-input" type="text" name="favourite">
+    
+                    <div class="form-container" form-no="3">
+                        <h3 class="section-title">3. Skills and Experience</h3>
+    
+                        <div class="form-element">
+                            <label class="form-label" for="experience">&lowast; What is your dance experience?</label>
+                            <input class="form-input" type="text" name="experience">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="commitment">&lowast; Are you currently in other dance commitments?</label>
+                            <input class="form-input" type="text" placeholder="" name="commitment">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="skill">&lowast; How would you rate your dancing based on skills and experience?</label>
+                            <div class="slider-wrapper">
+                                <div class="slider-value">Inexperienced</div>
+                                <input type="range" min="1" max="10" step="1" value="1" name="skill" class="skill-slider">
+                            </div>
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="why">&lowast; Why are you interested in joining us?</label>
+                            <textarea class="form-input" type="text" name="why" rows="4"></textarea>
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="favourite">Favourite KPOP Choreography</label>
+                            <input class="form-input" type="text" name="favourite">
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-container" form-no="4">
-                    <h3 class="section-title">4. Audition</h3>
-
-                    <div class="form-element">
-                        <label class="form-label" for="video">&lowast; Audition Clip</label>
-                        <input class="form-input" type="file" name="video" accept="video/*">
+    
+                    <div class="form-container" form-no="4">
+                        <h3 class="section-title">4. Audition</h3>
+    
+                        <div class="form-element">
+                            <label class="form-label" for="video">&lowast; Audition Clip</label>
+                            <input class="form-input" type="file" name="video" accept="video/*">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label" for="comment">Additional comments</label>
+                            <textarea class="form-input" type="text" name="comment" rows="4"></textarea>
+                        </div>
                     </div>
-                    <div class="form-element">
-                        <label class="form-label" for="comment">Additional comments</label>
-                        <textarea class="form-input" type="text" name="comment" rows="4"></textarea>
+    
+                    <div class="form-control">
+                        <button type="button" class="back black-button hide">back</button>
+                        <button type="button" class="next black-button">next</button>
+                        <button type="button" class="submit black-button" hidden>apply</button>
                     </div>
-                </div>
-
-                <div class="form-control">
-                    <button type="button" class="back black-button hide">back</button>
-                    <button type="button" class="next black-button">next</button>
-                    <button type="submit" class="submit black-button" hidden>apply</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </main>
         <footer></footer>
     </body>

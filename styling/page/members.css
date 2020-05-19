@@ -1,4 +1,18 @@
 /* ---------------------
+    LOADING ICON
+----------------------*/
+.member-profile img{
+    opacity: 0;
+}
+.member-profile.loading {
+    background-image: url('../../resources/loading.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1A1C23;
+    min-height: 150px;
+}
+
+/* ---------------------
     MEMBERS MAIN
 ----------------------*/
 .member-container {
@@ -37,20 +51,24 @@
     .member-container {
         grid-template-columns: repeat(4, 1fr);
     }
+    .member {
+        width: 180px;
+    }
+    .member img {
+        max-height: 180px;
+    }
 }
 
 /* ---------------------
     MODAL
 ----------------------*/
 .modal {
-    display: none;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 100%;
     left: 0;
-    top: 0;
-    background-color: rgba(0,0,0,0.9);
-    color: white;
+    top: 250px;
+    transform: translateX(-100vw);
+    color: black;
 }
 .modal:hover {
     cursor: pointer;
@@ -64,6 +82,7 @@
 }
 .modal-image {
     height: 50vh;
+    max-height: 80vmin;
 }
 .modal-name {
     display: block;
@@ -81,9 +100,6 @@
     font-weight: 550;
     text-transform: uppercase;
 }
-.feature-divider {
-    margin-bottom: 10px;
-}
 .close-modal {
     position: relative;
     color: #f1f1f1;
@@ -99,19 +115,25 @@
 }
 
 /* Add Animation */
-.modal {  
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s; 
-    animation-name: zoom;
+.member-container.hide {
+    animation-name: slideOut;
     animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+.modal.active { 
+    animation-name: slideIn;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 }
 
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
+@keyframes slideOut {
+    from {transform: translateX(0)} 
+    to {transform: translateX(-100vw)}
 }
 
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+@keyframes slideIn{
+    from {transform: translateX(100vw)} 
+    to {transform: translateX(0vw)}
 }

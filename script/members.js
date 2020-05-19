@@ -1,5 +1,15 @@
 // console.log(covers);
 
+// LOADING ICONS FOR IMAGES
+$('.member-profile').imagesLoaded()
+    .done( function( instance ) {
+    console.log('All images successfully loaded');
+})
+    .progress( function( instance, image ) {
+    $(image.img).parent('.member-profile').removeClass('loading');
+    $(image.img).animate({'opacity': '1'}, 500);
+});
+
 $('.member img').on('click', function(){
     var src = $(this).attr('src');
     var name = $(this).attr('member');
@@ -12,7 +22,6 @@ $('.member img').on('click', function(){
                 roleCovered = role.role;
             }
         });
-
         if (roleCovered !== undefined){
             let coverInvolved = '<p>' + cover.song + ' - ' + cover.artist + ' as <span class="cover-role">' + roleCovered + '</span></p>';
             $('.modal-list').append(coverInvolved);
@@ -21,9 +30,12 @@ $('.member img').on('click', function(){
     
     $('.modal-image').attr('src',src);
     $('.modal-name').empty().append(name);
-    $('.modal').css("display","block");
+    $('.modal').addClass('active');
+    $('.member-container').addClass('hide');
 });
 
 $('.modal').on('click', function(){
-    $('.modal').css("display","none");
+    $('.modal').removeClass('active');
+    $('.member-container').removeClass('hide');
 });
+

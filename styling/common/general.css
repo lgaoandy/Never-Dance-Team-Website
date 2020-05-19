@@ -26,9 +26,10 @@
     padding: 0px;
     box-sizing: border-box;
 }
+html {
+    overflow-y: scroll;
+}
 body {
-    opacity: 1;
-    transition: 0.7s opacity;
     font-size: 16px;
     font-family: "Lato";
     text-align: center;
@@ -47,21 +48,11 @@ body {
     min-height: 100vh;
     overflow-y: overlay;
 }
-body.fade {
-    opacity: 0;
-    transition: none;
-}
 a { 
     text-decoration: none;
 }
-
 h3 {
     font-size: 22px;
-}
-em {
-    font-weight: 550;
-    text-transform: uppercase;
-    color: grey;
 }
 
 /* ------------------------- 
@@ -138,7 +129,6 @@ main {
     max-width: 75vmin;
     margin: auto;
     margin-top: 35px;
-    z-index: -1;
 }
 .page-title {
     text-transform: uppercase;
@@ -217,4 +207,19 @@ footer.footer-space {
         transition: 0.3s;
         border-bottom: 1px groove white;
     }
+}
+/* -------------------------
+    LOADING ICON
+------------------------- */
+.loading-icon {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: url('../../resources/preloader.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
 }

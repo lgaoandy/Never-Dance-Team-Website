@@ -32,3 +32,16 @@ h4 {
     top: 0;
     width: 100%;
 }
+
+/* ------------------------- 
+    OPENING TRANSITION
+------------------------- */
+main {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opactiy: 1;}
+}

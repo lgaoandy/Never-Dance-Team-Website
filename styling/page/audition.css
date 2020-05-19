@@ -1,4 +1,4 @@
-main {
+.main-container {
     max-width: unset;
 }
 .main-wrapper {
@@ -23,6 +23,6 @@ main {
 }
 @media only screen and (min-width: 1000px){
     .main-container {
-        max-width: 90vmin;
+        max-width: 100vmin;
     }
 }

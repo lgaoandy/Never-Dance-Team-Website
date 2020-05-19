@@ -53,7 +53,7 @@ var covers = [
         new Role('Francine', 'Jennie'),
         new Role('Christine', 'Lisa'),
         new Role('Stephanie W.', 'Jisoo'),
-        new Role('Angelina', 'Rose')
+        new Role('Angelina', 'Rosé')
     ]),
     new Cover('Solo', 'Jennie', [
         new Role('Francine'),
@@ -94,13 +94,13 @@ var covers = [
         new Role('Izzie', 'Jin'),
         new Role('Chris', 'Suga')
     ]),
-    new Cover('Fake Love', 'Blackpink', [
+    new Cover('Kill This Love', 'Blackpink', [
         new Role('Stephanie W.', 'Jennie'),
         new Role('Angelina', 'Lisa'),
-        new Role('Kyara', 'Rose'),
+        new Role('Kyara', 'Rosé'),
         new Role('AJ', 'Lisa'),
         new Role('Tracey', 'Jisoo'),
-        new Role('Nicky', 'Rose'),
+        new Role('Nicky', 'Rosé'),
         new Role('Nicole', 'Jennie'),
         new Role('Simone', 'Jisoo')
     ]),
