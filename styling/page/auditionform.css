@@ -5,7 +5,7 @@
     min-width: 90vmin;
 }
 .audition-form {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .section-title {
     align-self: start;
@@ -75,6 +75,10 @@
 .form-control button {
     align-self: flex-start;
 }
+.message.red {
+    color: rgb(250, 10, 10);
+    transition: color 1s;
+}
 button.next, button.submit {
     grid-area: next;
 }
@@ -102,4 +106,19 @@ button.hide {
 }
 .form-steps span.step {
     cursor: pointer;
+}
+.success {
+    font-family: 'Roboto-condensed';
+    font-size: 24px;
+}
+.success span{
+    font-size: 32px;
+}
+footer {
+    margin-top: 35px;
+}
+@media only screen and (min-height: 830px){
+    footer {
+        margin-top: unset;
+    }
 }

@@ -2,7 +2,7 @@
     max-width: unset;
 }
 .main-wrapper {
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -14,9 +14,21 @@
     align-self: stretch;
 }
 .group-picture {
-    margin-top: 15px;
     width: 100%;
     filter: saturate(90%);
+}
+.img-wrapper{
+    margin-top: 20px;
+}
+.img-wrapper.loading {
+    background-image: url('../../resources/loading.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1A1C23;
+    min-height: 200px;
+}
+.img-wrapper.loading img{
+    opacity: 0;
 }
 
 @media only screen and (min-width: 650px){
@@ -26,7 +38,7 @@
     .flex-element {
         padding: 0 10vmin;
     }
-    .group-picture {
+    .img-wrapper {
         max-width: 1200px;
     }
 }

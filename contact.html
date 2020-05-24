@@ -14,42 +14,98 @@
         <link rel="stylesheet" href="../styling/page/contact.css">
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
         <script src="../script/general.js"></script>
+        <script src="../script/common/forms.js" defer></script>
+        <script src="../script/contact.js" defer></script>
     </head>
     <body class="fade">
-        <header></header>
+        <header>
+            <div class="header-container">
+                <div class="header-wrapper">
+                    <div class="navbar-toggle">
+                        <img class="navbar-icon" src="../images/icons/bars.png">
+                    </div>
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="../images/logos/never-transparent.png" alt="Never" class="header-logo">
+                        </a>
+                    </div>
+                </div>
+                <nav class="navbar-wrapper">
+                    <a class="nav-link" href="about.html">about us</a>
+                    <a class="nav-link" href="members.html">members</a>
+                    <a class="nav-link" href="audition.html">audition</a>
+                    <a class="nav-link" href="contact.html">contact us</a>
+                    <a class="nav-link" href="faq.html">faq</a>
+                </nav>
+            </div>
+        </header>
         <main>
             <div class="main-container">
                 <div class="title-wrapper transition-1">
                     <h3 class="page-title">Contact Us</h3>
                     <hr class="title-divider">
                 </div>
-                <p class="transition-2">Before emailing us, please refer to the 
-                    <a class="faq-link text-link" href="faq.html">FAQ</a>
-                    to find answers to the most commonly asked questions
-                </p>
-                <form class="form-container transition-3">
-                    <div class="form-element">
-                        <label class="form-label">Name</label>
-                        <input class="form-input" type="text" required>
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label">Email</label>
-                        <input class="form-input" type="email" required>
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label">Phone Number</label>
-                        <input class="form-input" type="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                    </div>
-                    <div class="form-element">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-input" required></textarea><br>
-                    </div>
-                    <div class="button-container">
-                        <button class="stylized-button">Send</button>
-                    </div>
-                </form>
+                <div class="success-message">
+                    <span>Thank you for contacting us</span><br>
+                    Your message has been sent successfully. We will contact you shortly.
+                </div>
+                <div class="main-wrapper">
+                    <p class="transition-2">Before sending us a message, <br>
+                        please visit our 
+                        <a class="faq-link text-link" href="faq.html">FAQ</a>
+                        to find answers to the most commonly asked questions
+                    </p>
+                    <form class="form-container transition-3" autocomplete="off">
+                        <div class="form-element">
+                            <label class="form-label">&lowast; Name</label>
+                            <input class="form-input" type="text" name="name">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label">&lowast; Subject</label>
+                            <select class="form-input" name="subject">
+                                <option class="default" value="" selected></option>
+                                <option value="audition">Audition question</option>
+                                <option value="collaboration">Dance collaboration</option>
+                                <option value="performance">Requesting live performance</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label">&lowast; Email</label>
+                            <input class="form-input" type="text" name="email">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label">Phone Number
+                                <span>Format: XXX-XXX-XXXX</span>
+                            </label>
+                            <input class="form-input" type="tel" name="phone">
+                        </div>
+                        <div class="form-element">
+                            <label class="form-label">&lowast; Message</label>
+                            <textarea class="form-input" rows="4" name="message"></textarea><br>
+                        </div>
+                        <div class="button-container">
+                            <button type="button" id="submit" class="stylized-button">Send</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+            <div class="copyright">
+                &copy; 2020 Never Official
+            </div>
+            <div class="footer-links">
+                <a href="https://www.youtube.com/channel/UCN76HJCEOipjDLIB5bYMexw/" target="_blank">
+                    <img class="social-media-icon" icon="youtube" alt="youtube link" src="../images/icons/youtube.png">
+                </a>
+                <a href="https://www.instagram.com/neverofficialyyc/" target="_blank">
+                    <img class="social-media-icon" icon="instagram" alt="instagram link" src="../images/icons/instagram.png">
+                </a>
+                <a href="https://www.facebook.com/neverofficialyyc/" target="_blank">
+                    <img class="social-media-icon" icon="facebook" alt="facebook link" src="../images/icons/facebook.png">
+                </a>
+            </div>
+        </footer>
     </body>
 </html>

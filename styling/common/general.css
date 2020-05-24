@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    src: url(../../fonts/RobotoCondensed-Light.ttf);
+    font-family: "Roboto-light";
+}
+
+@font-face {
     src: url(../../fonts/Lato-Regular.ttf);
     font-family: "Lato";
 }
@@ -131,6 +136,8 @@ main {
     margin-top: 35px;
 }
 .page-title {
+    font-family: 'Roboto-condensed';
+    font-size: 30px;
     text-transform: uppercase;
 }
 .title-divider {

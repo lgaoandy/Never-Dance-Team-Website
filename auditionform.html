@@ -13,10 +13,31 @@
         <link rel="stylesheet" href="../styling/page/auditionform.css">
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
         <script src="../script/general.js"></script>
+        <script src="../script/common/forms.js" defer></script>
         <script src="../script/auditionform.js" defer></script>
     </head>
     <body class="fade">
-        <header></header>
+        <header>
+            <div class="header-container">
+                <div class="header-wrapper">
+                    <div class="navbar-toggle">
+                        <img class="navbar-icon" src="../images/icons/bars.png">
+                    </div>
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="../images/logos/never-transparent.png" alt="Never" class="header-logo">
+                        </a>
+                    </div>
+                </div>
+                <nav class="navbar-wrapper">
+                    <a class="nav-link" href="about.html">about us</a>
+                    <a class="nav-link" href="members.html">members</a>
+                    <a class="nav-link" href="audition.html">audition</a>
+                    <a class="nav-link" href="contact.html">contact us</a>
+                    <a class="nav-link" href="faq.html">faq</a>
+                </nav>
+            </div>
+        </header>
         <main>
             <div class="main-container">
                 <form class="audition-form transition-1" action="auditionform.php" method="post" autocomplete="off">
@@ -30,35 +51,49 @@
                     <div class="form-container active" form-no="1">
                         <h3 class="section-title">1. Contact Information</h3> 
                         <div class="form-element">
-                            <label class="form-label" for="firstname">&lowast; First Name</label>
-                            <input class="form-input" type="text" name="firstname">
+                            <label class="form-label" for="firstname">&lowast; First Name
+                                <span class="message"></span>
+                            </label>
+                            <input class="form-input" type="text" name="firstname" required>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="lastname">&lowast; Last Name</label>
-                            <input class="form-input" type="text" name="lastname">
+                            <label class="form-label" for="lastname">&lowast; Last Name
+                                <span class="message"></span>
+                            </label>
+                            <input class="form-input" type="text" name="lastname" required>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="birthday">&lowast; Birthday</label>
-                            <input class="form-input" type="date" name="birthday">
+                            <label class="form-label" for="birthday">&lowast; Birthday
+                                <span class="message"></span>
+                            </label>
+                            <input class="form-input" type="date" name="birthday" required>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="gender">&lowast; Gender</label>
-                            <select class="form-input" name="gender">
+                            <label class="form-label" for="gender">&lowast; Gender
+                                <span class="message"></span>
+                            </label>
+                            <select class="form-input" type="select" name="gender" required>
                                 <option value="" selected disabled></option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                             </select>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="email">&lowast; Email Address</label>
-                            <input class="form-input" type="text" name="email">
+                            <label class="form-label" for="email">&lowast; Email Address
+                                <span class="message"></span>
+                            </label>
+                            <input class="form-input" type="text" name="email" required>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="instagram">Instagram</label>
+                            <label class="form-label" for="instagram">Instagram
+                                <span class="message">if applicable</span>
+                            </label>
                             <input class="form-input" type="text" name="instagram">
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="facebook">Facebook</label>
+                            <label class="form-label" for="facebook">Facebook
+                                <span class="message">if applicable</span>
+                            </label>
                             <input class="form-input" type="text" name="facebook">
                         </div>
                     </div>
@@ -66,12 +101,16 @@
                     <div class="form-container" form-no="2">
                         <h3 class="section-title">2. Transportation & Availability</h3>
                         <div class="form-element">
-                            <label class="form-label" for="address">&lowast; Address</label>
-                            <input class="form-input" type="text" name="address">
+                            <label class="form-label" for="address">&lowast; Address
+                                <span class="message"></span>
+                            </label>
+                            <input class="form-input" type="text" name="address" required>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="transportation">&lowast; Transportation method</label>
-                            <select class="form-input" name="transportation">
+                            <label class="form-label" for="transportation">&lowast; Transportation
+                                <span class="message">main method to attend practice</span>
+                            </label>
+                            <select class="form-input" type="select" name="transportation" required>
                                 <option value="" disabled selected></option>
                                 <option value="drive">Drive</option>
                                 <option value="transit">Transit</option>
@@ -80,16 +119,16 @@
                             </select>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" name="curfew">Curfew Time</label>
+                            <label class="form-label" name="curfew">Curfew Time
+                                <span class="message">if applicable</span>
+                            </label>
                             <input class="form-input" type="time" name="curfew">
                         </div>
                         <div class="form-element">
-                            <label class="form-label" name="availability">&lowast; Friday Avaliability</label>
-                            <input class="form-input" type="text" name="availability">
-                        </div>
-                        <div class="form-element">
-                            <label class="form-label" name="commitment">&lowast; Will you be able to commit to Friday practices regularly?</label>
-                            <input class="form-input" type="text" name="commitment">
+                            <label class="form-label" name="availability">&lowast; What is your avaliability on fridays?
+                                <span class="message">practices 3-6pm</span>
+                            </label>
+                            <input class="form-input" type="text" name="availability" required>
                         </div>
                     </div>
     
@@ -97,26 +136,36 @@
                         <h3 class="section-title">3. Skills and Experience</h3>
     
                         <div class="form-element">
-                            <label class="form-label" for="experience">&lowast; What is your dance experience?</label>
-                            <input class="form-input" type="text" name="experience">
+                            <label class="form-label" for="experience">&lowast; dance experience
+                                <span class="message">ex. 2 years hiphop, etc.</span>
+                            </label>
+                            <input class="form-input" type="text" name="experience" required>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="commitment">&lowast; Are you currently in other dance commitments?</label>
-                            <input class="form-input" type="text" placeholder="" name="commitment">
+                            <label class="form-label" for="commitment">&lowast; Do you currently have other dance-related commitments?
+                                <span class="message"></span>
+                            </label>
+                            <input class="form-input" type="text" placeholder="" name="commitment" required>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="skill">&lowast; How would you rate your dancing based on skills and experience?</label>
+                            <label class="form-label" for="skill">How would you rate your skills as a dancer? 
+                                <span>use the slider to answer</span>
+                            </label>
                             <div class="slider-wrapper">
                                 <div class="slider-value">Inexperienced</div>
                                 <input type="range" min="1" max="10" step="1" value="1" name="skill" class="skill-slider">
                             </div>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="why">&lowast; Why are you interested in joining us?</label>
-                            <textarea class="form-input" type="text" name="why" rows="4"></textarea>
+                            <label class="form-label" for="why">&lowast; Why are you interested in joining us?
+                                <span class="message"></span>
+                            </label>
+                            <textarea class="form-input" type="text" name="why" rows="4" required></textarea>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="favourite">Favourite KPOP Choreography</label>
+                            <label class="form-label" for="favourite">Favourite KPOP Choreography
+                                <span class="message">bonus question</span>
+                            </label>
                             <input class="form-input" type="text" name="favourite">
                         </div>
                     </div>
@@ -125,15 +174,19 @@
                         <h3 class="section-title">4. Audition</h3>
     
                         <div class="form-element">
-                            <label class="form-label" for="video">&lowast; Audition Clip</label>
-                            <input class="form-input" type="file" name="video" accept="video/*">
+                            <label class="form-label" for="video">&lowast; Audition Clip
+                                <span class="message">must be at least 1 min</span>
+                            </label>
+                            <input class="form-input" type="file" name="video" accept="video/*" required>
                         </div>
                         <div class="form-element">
-                            <label class="form-label" for="comment">Additional comments</label>
+                            <label class="form-label" for="comment">Additional comments
+                                <span class="message"></span>
+                            </label>
                             <textarea class="form-input" type="text" name="comment" rows="4"></textarea>
                         </div>
                     </div>
-    
+
                     <div class="form-control">
                         <button type="button" class="back black-button hide">back</button>
                         <button type="button" class="next black-button">next</button>
@@ -142,6 +195,21 @@
                 </form>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+            <div class="copyright">
+                &copy; 2020 Never Official
+            </div>
+            <div class="footer-links">
+                <a href="https://www.youtube.com/channel/UCN76HJCEOipjDLIB5bYMexw/" target="_blank">
+                    <img class="social-media-icon" icon="youtube" alt="youtube link" src="../images/icons/youtube.png">
+                </a>
+                <a href="https://www.instagram.com/neverofficialyyc/" target="_blank">
+                    <img class="social-media-icon" icon="instagram" alt="instagram link" src="../images/icons/instagram.png">
+                </a>
+                <a href="https://www.facebook.com/neverofficialyyc/" target="_blank">
+                    <img class="social-media-icon" icon="facebook" alt="facebook link" src="../images/icons/facebook.png">
+                </a>
+            </div>
+        </footer>
     </body>
 </html>

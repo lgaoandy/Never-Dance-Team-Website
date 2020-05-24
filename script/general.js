@@ -1,9 +1,3 @@
-// INCLUDE
-$(function(){
-    $('header').load('../components/header-component.html');
-    $('footer').load('../components/footer-component.html');
-});
-
 // PRE-lOADER
 window.addEventListener('load', () => {
     $('.loading-icon').fadeOut('fast');
